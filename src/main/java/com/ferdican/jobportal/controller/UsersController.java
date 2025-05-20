@@ -40,7 +40,7 @@ public class UsersController {
         Optional<Users> optionalUsers = usersService.getUserByEmail(users.getEmail());
 
         if (optionalUsers.isPresent()) {
-            model.addAttribute("error", "Email already registered");
+            model.addAttribute("error", "Email already registered,aa try to login or register with other email");
             List<UsersType> usersTypes = usersTypeService.getAll();
             model.addAttribute("getAllTypes", usersTypes);
             model.addAttribute("user", new Users());

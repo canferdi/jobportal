@@ -22,7 +22,7 @@ public class JobSeekerProfile {
     private String state;
     private String country;
     private String workAuthorization;
-    private String EmployementType;
+    private String employmentType;
     private String resume;
     @Column(nullable = true, length = 64)
     private String profilePhoto;
@@ -38,7 +38,7 @@ public class JobSeekerProfile {
         this.userId = userId;
     }
 
-    public JobSeekerProfile(int userAccountId, Users userId, String firstName, String lastName, String city, String state, String country, String workAuthorization, String employementType, String resume, String profilePhoto, List<Skills> skills) {
+    public JobSeekerProfile(int userAccountId, Users userId, String firstName, String lastName, String city, String state, String country, String workAuthorization, String employmentType, String resume, String profilePhoto, List<Skills> skills) {
         this.userAccountId = userAccountId;
         this.userId = userId;
         this.firstName = firstName;
@@ -47,7 +47,7 @@ public class JobSeekerProfile {
         this.state = state;
         this.country = country;
         this.workAuthorization = workAuthorization;
-        EmployementType = employementType;
+        this.employmentType = employmentType;
         this.resume = resume;
         this.profilePhoto = profilePhoto;
         this.skills = skills;
@@ -119,11 +119,11 @@ public class JobSeekerProfile {
     }
 
     public String getEmployementType() {
-        return EmployementType;
+        return employmentType;
     }
 
     public void setEmployementType(String employementType) {
-        EmployementType = employementType;
+        this.employmentType = employmentType;
     }
 
     public String getResume() {
@@ -161,7 +161,7 @@ public class JobSeekerProfile {
                 ", state='" + state + '\'' +
                 ", country='" + country + '\'' +
                 ", workAuthorization='" + workAuthorization + '\'' +
-                ", EmployementType='" + EmployementType + '\'' +
+                ", EmployementType='" + employmentType + '\'' +
                 ", resume='" + resume + '\'' +
                 ", profilePhoto='" + profilePhoto + '\'' +
                 ", skills=" + skills +
